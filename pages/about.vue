@@ -13,10 +13,17 @@
       eum. Assumenda quisquam aliquid modi hic sequi quos neque, similique
       beatae quidem laborum!
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { data } = await useFetch("/api/ninja?name=mario", {
+  method: "post",
+  body: { age: 30 },
+});
+// const { data } = useFetch("/api/ninja");
+</script>
 
 <style scoped>
 h2 {
