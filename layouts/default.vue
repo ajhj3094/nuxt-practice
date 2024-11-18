@@ -7,6 +7,7 @@
           <li><NuxtLink to="/">Home</NuxtLink></li>
           <li><NuxtLink to="/about">About</NuxtLink></li>
           <li><NuxtLink to="/products" class="btn">Product</NuxtLink></li>
+          <li><NuxtLink to="/products/abc">abc product</NuxtLink></li>
         </ul>
       </nav>
     </header>
@@ -20,6 +21,6 @@
 
 <style scoped>
 .router-link-exact-active {
-    color: green;
+  color: green;
 }
 </style>
