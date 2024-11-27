@@ -1,20 +1,23 @@
 <template>
   <div class="w-full h-full">
-    <div id="viewDiv" ref="viewDiv"></div>
+    <div
+      id="viewDiv"
+      ref="viewDiv"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import Map from "@arcgis/core/Map";
-import MapView from "@arcgis/core/views/MapView";
-import { onMounted } from "vue";
+import Map from '@arcgis/core/Map'
+import MapView from '@arcgis/core/views/MapView'
+import { onMounted } from 'vue'
 
-const viewDiv = ref();
+const viewDiv = ref()
 
 onMounted(() => {
   const map = new Map({
-    basemap: "topo-vector",
-  });
+    basemap: 'topo-vector',
+  })
 
   const view = new MapView({
     container: viewDiv.value, // reference the div id
@@ -26,12 +29,12 @@ onMounted(() => {
       maxZoom: 10, // 最大縮放級別
       rotationEnabled: false, // 禁用旋轉
     },
-  });
+  })
 
   view.when(() => {
-    console.log("init");
-  });
-});
+    console.log('init')
+  })
+})
 </script>
 
 <style lang="scss" scoped>
